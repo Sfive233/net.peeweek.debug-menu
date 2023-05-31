@@ -105,7 +105,7 @@ namespace DebugMenuUtility
             {
                 visible = !visible;
                 selected = 0;
-                onDebugMenuToggle.Invoke(visible);
+                onDebugMenuToggle?.Invoke(visible);
             }
 
             if (visible)
@@ -207,7 +207,12 @@ namespace DebugMenuUtility
             subFolders = allItems.Keys.Where(o => !string.IsNullOrEmpty(o) && o.Contains(currentPath) && o.Split('/').Length == depth + 1).ToArray();
 
             if (depth >= 1)
-                itemList.Add(new NavigateDebugMenuItem(string.Join('/', currentPath.Split('/').SkipLast(1).ToArray()), "/.."));
+            {
+                string[] str = currentPath.Split('/');
+                string[] skipStr = new string[str.Length - 1];
+                Array.Copy(str, skipStr, str.Length - 1);
+                itemList.Add(new NavigateDebugMenuItem(string.Join("/", skipStr), "/.."));
+            }
 
             foreach (var f in subFolders)
                 itemList.Add(new NavigateDebugMenuItem(f, $"{f}"));

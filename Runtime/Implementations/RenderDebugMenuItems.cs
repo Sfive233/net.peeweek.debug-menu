@@ -118,7 +118,7 @@ namespace DebugMenuUtility
         bool inited = false;
 
         public override string label => "Screen Resolution";
-        public override string value => $"{Screen.currentResolution.width}×{Screen.currentResolution.height}";
+        public override string value => $"{Screen.currentResolution.width} x {Screen.currentResolution.height}";
 
         public override Action OnValidate => Increase;
         public override Action OnLeft => Decrease;
