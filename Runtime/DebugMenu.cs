@@ -77,6 +77,14 @@ namespace DebugMenuUtility
             ToggleAction(config.left, true);
             ToggleAction(config.right, true);
             ToggleAction(config.enter, true);
+
+            foreach(var keyValuePair in allItems)
+            {
+                foreach(var item in keyValuePair.Value)
+                {
+                    item.OnStart?.Invoke();
+                }
+            }
         }
 
         private void OnDisable()
@@ -346,12 +354,13 @@ namespace DebugMenuUtility
         public abstract string label { get; }
         public virtual string value => string.Empty;
 
+        public virtual Action OnStart => null;
         public virtual Action OnValidate => null;
         public virtual Action OnLeft => null;
         public virtual Action OnRight => null;
     }
 
-    [DebugMenuItem("")]
+    //[DebugMenuItem("")]
     class ExitDebugMenuItem : DebugMenuItem
     {
         public override string label => "Exit Game";

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DebugMenuUtility
 {
-    [DebugMenuItem("Rendering")]
+    //[DebugMenuItem("Rendering")]
     class FPSDebugMenuItem : DebugMenuItem
     { 
         public override string label => "Frame Rate";
@@ -33,7 +33,7 @@ namespace DebugMenuUtility
         }
     }
 
-    [DebugMenuItem("Rendering")]
+    //[DebugMenuItem("Rendering")]
     class FramerateLimitDebugMenuItem : DebugMenuItem
     {
         public override string label => "Limit Framerate";
@@ -77,7 +77,7 @@ namespace DebugMenuUtility
         }
     }
 
-    [DebugMenuItem("Rendering")]
+    //[DebugMenuItem("Rendering")]
     class VSyncDebugMenuItem : DebugMenuItem
     {
         public override string label => "VSync";
@@ -95,7 +95,7 @@ namespace DebugMenuUtility
         }
     }
 
-    [DebugMenuItem("Rendering")]
+    //[DebugMenuItem("Rendering")]
     class FullScreenModeMenuItem : DebugMenuItem
     {
         public override string label => "Full Screen Mode";
@@ -112,7 +112,7 @@ namespace DebugMenuUtility
         }
     }
 
-    [DebugMenuItem("Rendering")]
+    //[DebugMenuItem("Rendering")]
     class ResolutionMenuItem : DebugMenuItem
     {
         bool inited = false;

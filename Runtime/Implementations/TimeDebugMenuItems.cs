@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DebugMenuUtility
 {
-    [DebugMenuItem("Time")]
+    //[DebugMenuItem("Time")]
     class TimeScaleDebugMenuItem : DebugMenuItem
     {
         public override string label => "Time Scale";
@@ -13,21 +13,21 @@ namespace DebugMenuUtility
         public override Action OnRight => () => Time.timeScale = Mathf.Min(10f, Time.timeScale + 0.1f);
     }
 
-    [DebugMenuItem("Time")]
+    //[DebugMenuItem("Time")]
     class TimeDebugMenuItem : DebugMenuItem
     {
         public override string label => "Total Time";
         public override string value => $"{Time.time.ToString("F1")}";
     }
 
-    [DebugMenuItem("Time")]
+    //[DebugMenuItem("Time")]
     class UnscaledTimeDebugMenuItem : DebugMenuItem
     {
         public override string label => "Total Time (Unscaled)";
         public override string value => $"{Time.unscaledTime.ToString("F1")}";
     }
 
-    [DebugMenuItem("Time")]
+    //[DebugMenuItem("Time")]
     class FrameDebugMenuItem : DebugMenuItem
     {
         public override string label => "Frame";

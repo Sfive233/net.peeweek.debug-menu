@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace DebugMenuUtility
 {
+    [CreateAssetMenu]
     public class DebugMenuConfiguration : ScriptableObject
     {
         public enum Alignment

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DebugMenuUtility
 {
-    [DebugMenuItem("Physics")]
+    //[DebugMenuItem("Physics")]
     class PhysicsAutoSimMenuItem : DebugMenuItem
     {
         public override string label => "Auto Simulation";
